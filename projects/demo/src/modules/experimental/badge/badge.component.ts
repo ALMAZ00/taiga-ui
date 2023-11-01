@@ -1,6 +1,10 @@
 import {Component} from '@angular/core';
 import {changeDetection} from '@demo/emulate/change-detection';
-import {TuiDocExample, TuiRawLoaderContent} from '@taiga-ui/addon-doc';
+import {
+    TuiDocExample,
+    TuiDocumentationProperty,
+    TuiRawLoaderContent,
+} from '@taiga-ui/addon-doc';
 import {TuiSizeS, TuiSizeXL} from '@taiga-ui/core';
 
 @Component({
@@ -66,4 +70,23 @@ export class ExampleTuiBadgeComponent {
     contentType = this.contentTypeVariants[0];
 
     dot = false;
+
+    readonly iconBadgeContent = '<div tuiFade>Taiga UI</div>';
+
+    readonly iconBadgeBaseProps: Record<string, TuiDocumentationProperty> = {
+        iconLeft: {
+            type: null,
+            value: 'tuiIconCheck',
+        },
+    };
+
+    readonly imageBadgeBaseProps: Record<string, TuiDocumentationProperty> = {
+        tuiBadge: {
+            type: null,
+        },
+        src: {
+            type: null,
+            value: 'assets/images/avatar.jpg',
+        },
+    };
 }
