@@ -32,12 +32,11 @@
     </ng-template>
 
     <ng-template pageTab>
-        <tui-doc-demo
-            #badgedContentDocumentationApiHost="documentationApiHost"
-            documentationApiHost
-            documentationTemplateTagName="tui-badged-content"
-        >
+        <tui-doc-demo>
             <tui-badged-content
+                #badgedContentDocumentationApiHost="documentationApiHost"
+                documentationApiHost
+                documentationTemplate
                 [colorBottom]="colorBottom"
                 [colorTop]="colorTop"
                 [contentBottom]="contentBottom === 'Template' ? example : contentBottom"
@@ -48,7 +47,7 @@
                 <tui-avatar
                     #avatarDocumentationApiHost="documentationApiHost"
                     documentationApiHost
-                    documentationTemplateTagName="tui-avatar"
+                    documentationTemplate
                     new
                     text="daenerys targaryen"
                     [documentationTemplateBaseProperties]="avatarBaseProperties"

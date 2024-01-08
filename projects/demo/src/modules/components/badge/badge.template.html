@@ -51,7 +51,7 @@
             <p>
                 <ng-container *ngIf="withIcon; else withoutIcon">
                     <tui-badge
-                        documentationTemplateTagName="tui-badge"
+                        documentationTemplate
                         [documentationTemplateContent]="content"
                         [hoverable]="hoverable"
                         [size]="size"
@@ -63,7 +63,7 @@
                 </ng-container>
                 <ng-template #withoutIcon>
                     <tui-badge
-                        documentationTemplateTagName="tui-badge"
+                        documentationTemplate
                         [hoverable]="hoverable"
                         [size]="size"
                         [status]="status"
