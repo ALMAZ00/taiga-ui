@@ -46,16 +46,13 @@
         </tui-doc-example>
     </ng-template>
 
-    <ng-template
-        documentationApiHost
-        documentationTemplateTagName="tui-badge"
-        pageTab
-        [documentationTemplateContent]="withIcon ? content : ''"
-    >
+    <ng-template pageTab>
         <tui-doc-demo>
             <p>
                 <ng-container *ngIf="withIcon; else withoutIcon">
                     <tui-badge
+                        documentationTemplateTagName="tui-badge"
+                        [documentationTemplateContent]="content"
                         [hoverable]="hoverable"
                         [size]="size"
                         [status]="status"
@@ -66,6 +63,7 @@
                 </ng-container>
                 <ng-template #withoutIcon>
                     <tui-badge
+                        documentationTemplateTagName="tui-badge"
                         [hoverable]="hoverable"
                         [size]="size"
                         [status]="status"
